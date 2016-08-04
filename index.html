@@ -1,56 +1,23 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Genevol-usp.GitHub.io by genevol-usp</title>
+---
+layout: default
+---
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    <meta name="viewport" content="width=device-width">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Genevol-usp.GitHub.io</h1>
-        <p>Site for the USP group of Evolutionary Genetics</p>
+<div class="home">
 
+  <h1 class="page-heading">Posts</h1>
 
-        <p class="view"><a href="https://github.com/genevol-usp">View My GitHub Profile</a></p>
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-      </header>
-      <section>
-        <h3>
-<a id="welcome-to-the-genevol-pages" class="anchor" href="#welcome-to-the-genevol-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Welcome to the Genevol Pages.</h3>
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
 
-<p>This is the page for the evolutionary genetics group at the University of São Paulo</p>
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
-<h3>
-<a id="our-research" class="anchor" href="#our-research" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Our research</h3>
-
-<p><strong>Our groups focuses on</strong></p>
-
-<ul>
-<li>Human Populations Genetics</li>
-<li>Evolutionary Genetics of MHC genes</li>
-<li>Detection of balancing selection in the human genome</li>
-<li>Selection-driven genetic load</li>
-<li>HLA transcriptomics</li>
-</ul>
-
-<h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>The lab PI is Diogo Meyer (<a href="https://github.com/diogomeyer" class="user-mention">@diogomeyer</a>).</p>
-      </section>
-      <footer>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
-  </body>
-</html>
+</div>
