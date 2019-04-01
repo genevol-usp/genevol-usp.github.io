@@ -11,7 +11,8 @@ ruby RUBY_VERSION
 # Happy Jekylling!
 gem "jekyll", ">= 3.6.3"
 
-# This is the default theme for new Jekyll sites. You may change this to anything you like.
+# theme
+#gem "jekyll-theme-cayman"
 gem "minima"
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
